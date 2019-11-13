@@ -1,6 +1,5 @@
-console.log("this is from client side javascript")
 
-fetch('http://localhost:3000/weather?').then((response) => {
+fetch('/weather?address='+ location).then((response) => {
     response.json().then((data) => {
         if(data.error){
             console.log('there was an error')
